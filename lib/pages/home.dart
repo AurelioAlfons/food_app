@@ -29,27 +29,37 @@ class HomePage extends StatelessWidget {
                   filled: true,
                   fillColor: Colors.white,
                   contentPadding: const EdgeInsets.all(15),
+                  hintText: 'Search Pancake',
+                  hintStyle: const TextStyle(
+                    color: Color.fromARGB(255, 214, 220, 220),
+                    fontSize: 20,
+                  ),
                   // Left Icon
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(12),
                     child: SvgPicture.asset('assets/icons/Search.svg'),
                   ),
                   // Right Icon
-                  suffixIcon: IntrinsicHeight(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          const VerticalDivider(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            indent: 10,
-                            endIndent: 10,
-                            thickness: 0.4,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(15),
-                            child: SvgPicture.asset('assets/icons/Filter.svg'),
-                          ),
-                        ]),
+                  // ignore: avoid_unnecessary_containers
+                  suffixIcon: SizedBox(
+                    width: 80,
+                    child: IntrinsicHeight(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            const VerticalDivider(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              indent: 10,
+                              endIndent: 10,
+                              thickness: 0.4,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15),
+                              child:
+                                  SvgPicture.asset('assets/icons/Filter.svg'),
+                            ),
+                          ]),
+                    ),
                   ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
