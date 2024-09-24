@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       // Remove the debug banner on top right
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'poppins'),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
