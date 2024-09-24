@@ -23,11 +23,22 @@ class HomePage extends StatelessWidget {
                   blurRadius: 40,
                   spreadRadius: 0.0)
             ]),
+            // Text Field
             child: TextField(
               decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
                   contentPadding: const EdgeInsets.all(15),
+                  // Left Icon
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: SvgPicture.asset('assets/icons/Search.svg'),
+                  ),
+                  // Right Icon
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.all(6),
+                    child: SvgPicture.asset('assets/icons/Filter.svg'),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide.none,
