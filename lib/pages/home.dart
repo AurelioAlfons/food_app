@@ -12,11 +12,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Breakfast',
+          '🍔Breakfast🍕',
           style: TextStyle(
               color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
         ),
+        // Change App bar bg color
         backgroundColor: Colors.yellow,
+        // Remove the shadow of the app bar
+        elevation: 0.0,
+        // Center the text
         centerTitle: true,
       ),
     );
