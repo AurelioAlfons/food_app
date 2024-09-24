@@ -3,12 +3,27 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:food_app/models/category_model.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  List<CategoryModel> categories = [];
+
+  void _getCategories() {
+    categories = CategoryModel.getCategories();
+  }
+
+  @override
+  // ignore: override_on_non_overriding_member
+  void initState() {
+    _getCategories();
+  }
 
   @override
   Widget build(BuildContext context) {
+    _getCategories();
     // const - constant it means value cannot change & created only once
     return Scaffold(
       // Extract the appBar function()
