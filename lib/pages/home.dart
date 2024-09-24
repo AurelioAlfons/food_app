@@ -14,14 +14,22 @@ class HomePage extends StatelessWidget {
         title: const Text(
           '🍔Breakfast🍕',
           style: TextStyle(
-              color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+              color: Color.fromARGB(255, 255, 255, 255),
+              fontSize: 18,
+              fontWeight: FontWeight.bold),
         ),
         // Change App bar bg color
-        backgroundColor: Colors.yellow,
+        backgroundColor: const Color.fromARGB(255, 81, 61, 236),
         // Remove the shadow of the app bar
         elevation: 0.0,
         // Center the text
         centerTitle: true,
+        leading: Container(
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 251, 207, 15),
+              borderRadius: BorderRadius.circular(10)),
+        ),
       ),
     );
   }
