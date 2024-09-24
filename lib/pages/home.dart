@@ -13,6 +13,19 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       // Extract the appBar function()
       appBar: appBar(),
+      body: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
+            child: const TextField(
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 
