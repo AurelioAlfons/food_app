@@ -25,32 +25,40 @@ class HomePage extends StatelessWidget {
         elevation: 0.0,
         // Center the text
         centerTitle: true,
-        leading: Container(
-          margin: const EdgeInsets.all(10),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              color: const Color(0x000000ff),
-              borderRadius: BorderRadius.circular(10)),
-          child: SvgPicture.asset(
-            'assets/icons/Arrow - Left 2.svg',
-            color: Colors.white,
-            height: 30,
-            width: 30,
-          ),
-        ),
-        actions: [
-          Container(
+        leading: GestureDetector(
+          onTap: () {},
+          child: Container(
             margin: const EdgeInsets.all(10),
             alignment: Alignment.center,
-            width: 20,
             decoration: BoxDecoration(
                 color: const Color(0x000000ff),
                 borderRadius: BorderRadius.circular(10)),
             child: SvgPicture.asset(
-              'assets/icons/dots.svg',
+              'assets/icons/Arrow - Left 2.svg',
+              // ignore: deprecated_member_use
               color: Colors.white,
               height: 30,
               width: 30,
+            ),
+          ),
+        ),
+        actions: [
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              margin: const EdgeInsets.all(10),
+              alignment: Alignment.center,
+              width: 20,
+              decoration: BoxDecoration(
+                  color: const Color(0x000000ff),
+                  borderRadius: BorderRadius.circular(10)),
+              child: SvgPicture.asset(
+                'assets/icons/dots.svg',
+                // ignore: deprecated_member_use
+                color: Colors.white,
+                height: 30,
+                width: 30,
+              ),
             ),
           ),
         ],
