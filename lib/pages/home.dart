@@ -9,6 +9,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // const - constant it means value cannot change & created only once
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Breakfast'),
+        centerTitle: true,
+      ),
+    );
   }
 }

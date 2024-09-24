@@ -10,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // const - constant it means value cannot change & created only once
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Simple Food Gallery App',
       // Remove the debug banner on top right
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(fontFamily: 'poppins'),
+      home: const HomePage(),
     );
   }
 }
