@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
       appBar: appBar(),
       backgroundColor: Colors.white,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _searchField(),
           const SizedBox(
@@ -22,12 +23,15 @@ class HomePage extends StatelessWidget {
           ),
           const Column(
             children: [
-              Text(
-                'Category',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
+              Padding(
+                padding: EdgeInsets.only(left: 25),
+                child: Text(
+                  'Category',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               )
             ],
