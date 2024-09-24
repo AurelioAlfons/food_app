@@ -13,61 +13,61 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       // Extract the appBar function()
       appBar: appBar(),
+      backgroundColor: Colors.white,
       body: Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
-            decoration: BoxDecoration(boxShadow: [
-              BoxShadow(
-                  color: const Color(0xff1D1617).withOpacity(0.11),
-                  blurRadius: 40,
-                  spreadRadius: 0.0)
-            ]),
-            // Text Field
-            child: TextField(
-              decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: const EdgeInsets.all(15),
-                  hintText: 'Search Pancake',
-                  hintStyle: const TextStyle(
-                    color: Color.fromARGB(255, 214, 220, 220),
-                    fontSize: 20,
-                  ),
-                  // Left Icon
-                  prefixIcon: Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: SvgPicture.asset('assets/icons/Search.svg'),
-                  ),
-                  // Right Icon
-                  // ignore: avoid_unnecessary_containers
-                  suffixIcon: SizedBox(
-                    width: 80,
-                    child: IntrinsicHeight(
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            const VerticalDivider(
-                              color: Color.fromARGB(255, 0, 0, 0),
-                              indent: 10,
-                              endIndent: 10,
-                              thickness: 0.4,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(15),
-                              child:
-                                  SvgPicture.asset('assets/icons/Filter.svg'),
-                            ),
-                          ]),
-                    ),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: BorderSide.none,
-                  )),
+        children: [_searchField()],
+      ),
+    );
+  }
+
+  Container _searchField() {
+    return Container(
+      margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+            color: const Color(0xff1D1617).withOpacity(0.11),
+            blurRadius: 40,
+            spreadRadius: 0.0)
+      ]),
+      // Text Field
+      child: TextField(
+        decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.white,
+            contentPadding: const EdgeInsets.all(15),
+            hintText: 'Search Pancake',
+            hintStyle: const TextStyle(
+              color: Color.fromARGB(255, 214, 220, 220),
+              fontSize: 20,
             ),
-          )
-        ],
+            // Left Icon
+            prefixIcon: Padding(
+              padding: const EdgeInsets.all(12),
+              child: SvgPicture.asset('assets/icons/Search.svg'),
+            ),
+            // Right Icon
+            // Here we used SizedBox to size the width cuz it's blocking the Hint
+            suffixIcon: SizedBox(
+              width: 80,
+              child: IntrinsicHeight(
+                child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                  const VerticalDivider(
+                    color: Color.fromARGB(255, 0, 0, 0),
+                    indent: 10,
+                    endIndent: 10,
+                    thickness: 0.4,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: SvgPicture.asset('assets/icons/Filter.svg'),
+                  ),
+                ]),
+              ),
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide: BorderSide.none,
+            )),
       ),
     );
   }
