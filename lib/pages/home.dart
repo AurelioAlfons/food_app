@@ -2,6 +2,7 @@
 // Home Page
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,10 +27,33 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         leading: Container(
           margin: const EdgeInsets.all(10),
+          alignment: Alignment.center,
           decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 251, 207, 15),
+              color: const Color(0x000000ff),
               borderRadius: BorderRadius.circular(10)),
+          child: SvgPicture.asset(
+            'assets/icons/Arrow - Left 2.svg',
+            color: Colors.white,
+            height: 30,
+            width: 30,
+          ),
         ),
+        actions: [
+          Container(
+            margin: const EdgeInsets.all(10),
+            alignment: Alignment.center,
+            width: 20,
+            decoration: BoxDecoration(
+                color: const Color(0x000000ff),
+                borderRadius: BorderRadius.circular(10)),
+            child: SvgPicture.asset(
+              'assets/icons/dots.svg',
+              color: Colors.white,
+              height: 30,
+              width: 30,
+            ),
+          ),
+        ],
       ),
     );
   }
