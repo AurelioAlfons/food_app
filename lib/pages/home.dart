@@ -11,7 +11,12 @@ class HomePage extends StatelessWidget {
     // const - constant it means value cannot change & created only once
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Breakfast'),
+        title: const Text(
+          'Breakfast',
+          style: TextStyle(
+              color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.yellow,
         centerTitle: true,
       ),
     );
