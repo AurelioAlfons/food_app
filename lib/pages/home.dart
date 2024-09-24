@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           '🍔Breakfast🍕',
           style: TextStyle(
               color: Color.fromARGB(255, 255, 255, 255),
-              fontSize: 18,
+              fontSize: 24,
               fontWeight: FontWeight.bold),
         ),
         // Change App bar bg color
